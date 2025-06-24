@@ -1,6 +1,7 @@
 Project Title – AIR QUALITY PREDICTOR AND ANALYZER 
+
 https://aqi-predictor-and-analyazer-27dsjpydrtqsqd5ieuwpuh.streamlit.app/ to run a app in streamlit.
-**Problem Statement: **
+<b><u>Problem Statement:</u></b>
 Air pollution poses a serious threat to human health, especially in urban environments where 
 industrial emissions, vehicular exhaust, and climate factors can cause a spike in harmful air 
 pollutants. In India, the Air Quality Index (AQI) is a key metric used to assess the health impact 
@@ -9,12 +10,12 @@ However, most people don’t have real-time or localized access to AQI data, nor
 understand the implications of different pollutant levels. There is a need for an intelligent, 
 accessible system that can predict, analyze, and visualize AQI based on location and time, and 
 provide actionable advisory. 
-**Statement: **
+<b><u>Statement:</u><b>
 Design and develop an AI-powered web-based application using Machine Learning to predict, 
 analyze, and visualize the Air Quality Index (AQI) across Indian cities using historical pollutant 
 data, and offer public health insights with interactive advisory.
 
-**Methodology Used: **
+<b><u>Methodology Used: </u></b>
 1.  Data Collection & Preprocessing: 
   • Source: Historical AQI and pollutant data from various Indian cities (from Jan 
   2023 to May 2025). 
