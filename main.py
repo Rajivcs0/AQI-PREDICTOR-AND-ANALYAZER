@@ -103,7 +103,6 @@ if not st.session_state.logged_in:
                 st.success(f"✅ Welcome, {username}!")
             else:
                 st.error("❌ Invalid Username or Password")
-
 # --------------- AQI Dashboard ---------------
 if st.session_state.logged_in:
 
