@@ -1,6 +1,7 @@
-Project Title – AIR QUALITY PREDICTOR AND ANALYZER 
+<b>Project Title – AIR QUALITY PREDICTOR AND ANALYZER </b>
 
 https://aqi-predictor-and-analyazer-27dsjpydrtqsqd5ieuwpuh.streamlit.app/ to run a app in streamlit.
+
 <b><u>Problem Statement:</u></b>
 Air pollution poses a serious threat to human health, especially in urban environments where 
 industrial emissions, vehicular exhaust, and climate factors can cause a spike in harmful air 
@@ -10,6 +11,7 @@ However, most people don’t have real-time or localized access to AQI data, nor
 understand the implications of different pollutant levels. There is a need for an intelligent, 
 accessible system that can predict, analyze, and visualize AQI based on location and time, and 
 provide actionable advisory. 
+
 <b><u>Statement:</u><b>
 Design and develop an AI-powered web-based application using Machine Learning to predict, 
 analyze, and visualize the Air Quality Index (AQI) across Indian cities using historical pollutant 
