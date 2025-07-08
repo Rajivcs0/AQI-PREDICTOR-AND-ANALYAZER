@@ -22,7 +22,8 @@ def set_background(image_file):
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center;
-            color: #222222;
+            color: black !important;
+            font-weight: bold !important;
         }}
         .block-container {{
             background: rgba(255, 255, 255, 0.85);
@@ -30,8 +31,14 @@ def set_background(image_file):
             border-radius: 12px;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         }}
+        /* Bold and black for all text */
+        h1, h2, h3, h4, h5, h6, p, span, label, div, input, button, .css-1cpxqw2 {{
+            color: black !important;
+            font-weight: bold !important;
+        }}
         </style>
         """, unsafe_allow_html=True)
+
 
 set_background("file_000000007b8c622faf8cc52e8d454185.png")
 
