@@ -1,6 +1,6 @@
 <b>Project Title – AIR QUALITY PREDICTOR AND ANALYZER </b>
 
-https://aqi-predictor-and-analyazer-27dsjpydrtqsqd5ieuwpuh.streamlit.app/ to run a app in streamlit.
+https://aqi-predictor-and-analyazer-vym7xfaq2ao6fermssgtqo.streamlit.app/ to run a app in streamlit.
 
 <b><u>Problem Statement:</u></b>
 Air pollution poses a serious threat to human health, especially in urban environments where 
@@ -33,11 +33,12 @@ data, and offer public health insights with interactive advisory.
 3. Streamlit Web Application: 
   • Developed an interactive frontend where users can: 
   ▪ Select Year, Date, City. 
-  ▪ View pollutant data and AQI level. 
+  ▪ View pollutant data and AQI level.
+  ▪ Using API key to fetch the live data and give a option to download a live fetch data.
   ▪ See a pie chart of pollutant concentrations (PM2.5, PM10, NO2, CO, O3). 
   ▪ Receive a health notification based on AQI level. 
   • Optional ML integration: Use live inputs to predict AQI using the trained model. 
-4.  Visualization: 
+5.  Visualization: 
   • Pie charts to show pollutant proportions. 
   • Bar charts, 3D charts, radar, scatter, and bubble charts for deeper insights. 
   • Visual alerts and textual advisory based on AQI categories (Good to Severe).
@@ -46,7 +47,9 @@ data, and offer public health insights with interactive advisory.
 ![Screenshot (5)](https://github.com/user-attachments/assets/866bd317-760b-47f4-9efc-d53cf1eaee86)
 ![Screenshot (4)](https://github.com/user-attachments/assets/77fa237b-2b97-47b6-8406-9645509dff86)
 ![Screenshot (3)](https://github.com/user-attachments/assets/c9adc614-5b08-4051-a8aa-b4406fe90ad9)
-
-
 ![Screenshot (7)](https://github.com/user-attachments/assets/153e58ed-2ab0-4e4c-87f6-672876f960c2)
+![Screenshot (29)](https://github.com/user-attachments/assets/1b2dba5f-61e6-4d5a-b8b2-d9d166a741ca)
+![Screenshot (28)](https://github.com/user-attachments/assets/9b041894-0eec-47e0-82d9-4f493a4118cf)
+
+
 
