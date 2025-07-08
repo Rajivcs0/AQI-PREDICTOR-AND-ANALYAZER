@@ -5,9 +5,3 @@ plotly
 scikit-learn
 joblib
 plotly.express 
-sqlite3
-hashlib
-base64
-requests
-FPDF
-BytesIO
