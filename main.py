@@ -117,7 +117,7 @@ if st.session_state.logged_in:
     df = load_data()
 
     st.title("🌍 AQI Prediction & Analysis")
-    st.subheader("Analyze the Air Quality level and download the Live fetch Data)
+    st.subheader("Analyze the Air Quality level and download the Live fetch Data")
 
     col1, col2, col3 = st.columns(3)
     with col1:
