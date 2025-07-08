@@ -40,7 +40,7 @@ def set_background(image_file):
         """, unsafe_allow_html=True)
 
 
-set_background("file_000000007b8c622faf8cc52e8d454185.png")
+set_background("Pollution.png")
 
 # --------------- Auth: Database & Functions ---------------
 def create_connection():
