@@ -33,7 +33,7 @@ def set_background(image_file):
         </style>
         """, unsafe_allow_html=True)
 
-set_background("Pollution.png")
+set_background("file_000000007b8c622faf8cc52e8d454185.png")
 
 # --------------- Auth: Database & Functions ---------------
 def create_connection():
@@ -116,7 +116,8 @@ if st.session_state.logged_in:
 
     df = load_data()
 
-    st.title("🌍 AQI Prediction & Analysis - Jan 2023 to May 2025")
+    st.title("🌍 AQI Prediction & Analysis")
+    st.subheader("Analyze the Air Quality level and download the Live fetch Data)
 
     col1, col2, col3 = st.columns(3)
     with col1:
