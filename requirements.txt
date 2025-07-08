@@ -4,3 +4,10 @@ numpy
 plotly
 scikit-learn
 joblib
+plotly.express as px
+sqlite3
+hashlib
+base64
+requests
+FPDF
+BytesIO
