@@ -256,3 +256,43 @@ if st.session_state.logged_in:
             )
         else:
             st.error("❌ Failed to fetch live AQI data.")
+    st.markdown("---")
+    st.subheader("📆 Fetch Past AQI Data (Experimental)")
+
+    past_city = st.selectbox("Select a city for past AQI", ["chennai", "mumbai", "delhi", "kolkata", "ahmedabad", "hyderabad", "jaipur", "bangalore"], key="past_city")
+    past_date = st.date_input("Select a past date", key="past_date")
+
+    def fetch_past_aqi(city, date_str):
+        url = f"https://api.waqi.info/feed/{city}/?token=78e9eadba5ec45b20b0963b3391f1dc58f7c7330"
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            if data["status"] == "ok":
+                current_time = data["data"].get("time", {}).get("s", "")
+                if date_str in current_time:
+                    return data["data"]
+                else:
+                    return {"simulated": True, "current_time": current_time}
+        return None
+
+    if st.button("Fetch Past AQI"):
+        date_str = past_date.strftime("%Y-%m-%d")
+        past_data = fetch_past_aqi(past_city, date_str)
+
+        if past_data and "simulated" not in past_data:
+            st.success(f"✅ AQI Data for {past_city.title()} on {date_str}")
+            past_aqi = past_data.get("aqi", "N/A")
+            past_pollutants = {k: v['v'] for k, v in past_data.get("iaqi", {}).items() if isinstance(v, dict)}
+
+            st.write(f"**AQI:** {past_aqi}")
+            st.write("**Pollutants:**", past_pollutants)
+
+            fig3 = px.pie(names=list(past_pollutants.keys()), values=list(past_pollutants.values()),
+                          title=f"Past Pollutant Composition for {past_city.title()} on {date_str}")
+            st.plotly_chart(fig3)
+
+        elif past_data and past_data.get("simulated"):
+            st.warning(f"⚠️ No historical data available for {date_str}. Showing current data as fallback.")
+            st.info(f"Latest data timestamp: {past_data['current_time']}")
+        else:
+            st.error("❌ Failed to fetch AQI data.")
