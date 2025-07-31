@@ -171,6 +171,10 @@ if st.session_state.logged_in:
     else:
         st.warning("⚠️ No data found for selected input.")
 
+    st.subheader(இந்தப் பிரிவானது கடந்த 2023 january இல் இருந்து 2025 may வரை இருக்கும் தகவல்கள் ஆகும். இது முற்றிலும் பயன்பாட்டாளர்களின் தகவல் பெறுவதற்கான பிரிவாகும். ஜூன் 2025 முதல் live data வை பெறும் படி இணையதளம் வடிவமைக்கப்பட்டுள்ளது. (குறிப்பு: ஜூன் 2025 மற்றும் அதற்கு படியான  தகவல்களை தினமும் பெற இயலாது. அன்றைய நாள் மட்டுமே பெறமுடியும்.)/ 
+
+This section contains information from January 2023 to May 2025. This is a section entirely for users to access information. The website is designed to provide live data from June 2025 onwards. (Note: Information from June 2025 and onwards cannot be accessed daily. It can only be accessed on that day.))
+
     st.markdown("---")
     st.subheader("📬 Get AQI Health Advisory by Manual Input")
     user_aqi = st.number_input("Enter an AQI value manually", min_value=0, max_value=999, step=1)
