@@ -174,21 +174,21 @@ if st.session_state.logged_in:
     st.subheader("இந்தப் பிரிவானது கடந்த 2023 january இல் இருந்து 2025 may வரை இருக்கும் தகவல்கள் ஆகும். இது முற்றிலும் பயன்பாட்டாளர்களின் தகவல் பெறுவதற்கான பிரிவாகும். ஜூன் 2025 முதல் live data வை பெறும் படி இணையதளம் வடிவமைக்கப்பட்டுள்ளது. (குறிப்பு: ஜூன் 2025 மற்றும் அதற்கு படியான  தகவல்களை தினமும் பெற இயலாது. அன்றைய நாள் மட்டுமே பெறமுடியும்.) ")
     st.subheader("This section contains information from January 2023 to May 2025. This is a section entirely for users to access information. The website is designed to provide live data from June 2025 onwards. (Note: Information from June 2025 and onwards cannot be accessed daily. It can only be accessed on that day.)")
     st.markdown("---")
-    st.subheader("📬 Get AQI Health Advisory by Manual Input")
-    user_aqi = st.number_input("Enter an AQI value manually", min_value=0, max_value=999, step=1)
+    st.subheader("📬 Get AQI Health Advisory by Manual Input / கையேடு உள்ளீடு மூலம் AQI சுகாதார ஆலோசனையைப் பெறுங்கள்.")
+    user_aqi = st.number_input("Enter an AQI value manually / AQI மதிப்பைக் கொடுக்கவும்", min_value=0, max_value=999, step=1)
     if st.button("Get Advisory"):
         if user_aqi <= 50:
-            st.success("✅ Good – Air quality is considered satisfactory.")
+            st.success("✅ Good – Air quality is considered satisfactory. / நல்ல காற்று மற்றும் மாசற்ற சூழல் உள்ளது.")
         elif user_aqi <= 100:
-            st.info("😷 Satisfactory – Acceptable air quality.")
+            st.info("😷 Satisfactory – Acceptable air quality. / ஏற்றுக்கொள்ளக் கூடிய சுற்றுச்சூழல்.")
         elif user_aqi <= 200:
-            st.warning("⚠️ Moderate – May cause health issues.")
+            st.warning("⚠️ Moderate – May cause health issues. / சற்று அளவான சுற்றுச்சூழல் அமைப்பு - உடல்நலம் கெடுவதற்கு வாய்ப்புள்ளது.")
         elif user_aqi <= 300:
-            st.error("❌ Poor – Health effects possible.")
+            st.error("❌ Poor – Health effects possible./ சற்று மோசமான சுற்றுச்சூழல் - உடல்நலம் கெடுவதற்கு வாய்ப்புள்ளது.")
         elif user_aqi <= 400:
-            st.error("🚨 Very Poor – Avoid going outside.")
+            st.error("🚨 Very Poor – Avoid going outside./ மோசமான சுற்றுச்சூழல் - வெளியில் செல்வதைத் தவிர்க்கவும்.")
         else:
-            st.error("🛑 Severe – Serious health effects.")
+            st.error("🛑 Severe – Serious health effects. / மிகவும் மோசமான சுற்றுச்சூழல் - மிகவும் உடல்நலம் பாதிக்கப்பட்டு சோர்வடையச் செய்யும்.")
 
     # --------------- LIVE AQI SECTION ----------------
     st.markdown("---")
@@ -221,19 +221,19 @@ if st.session_state.logged_in:
 
             live_aqi_val = int(live_aqi) if str(live_aqi).isdigit() else -1
             if 0 <= live_aqi_val <= 50:
-                st.success("✅ Good – No worries.")
+                st.success("✅ Good – No worries. / நல்ல காற்று மற்றும் மாசற்ற சூழல் உள்ளது.")
             elif live_aqi_val <= 100:
-                st.info("😷 Satisfactory – Minor pollution.")
+                st.info("😷 Satisfactory – Minor pollution. / ஏற்றுக்கொள்ளக் கூடிய சுற்றுச்சூழல்.")
             elif live_aqi_val <= 200:
-                st.warning("⚠️ Moderate – Sensitive groups take care.")
+                st.warning("⚠️ Moderate – Sensitive groups take care. / சற்று அளவான சுற்றுச்சூழல் அமைப்பு - உடல்நலம் கெடுவதற்கு வாய்ப்புள்ளது.")
             elif live_aqi_val <= 300:
-                st.error("❌ Poor – Harmful for sensitive and elderly.")
+                st.error("❌ Poor – Harmful for sensitive and elderly. / சற்று மோசமான சுற்றுச்சூழல் - உடல்நலம் கெடுவதற்கு வாய்ப்புள்ளது.")
             elif live_aqi_val <= 400:
-                st.error("🚨 Very Poor – Dangerous air quality.")
+                st.error("🚨 Very Poor – Dangerous air quality. / மோசமான சுற்றுச்சூழல் - வெளியில் செல்வதைத் தவிர்க்கவும்.")
             elif live_aqi_val > 400:
-                st.error("🛑 Severe – Avoid going outside.")
+                st.error("🛑 Severe – Avoid going outside.  / மிகவும் மோசமான சுற்றுச்சூழல் - மிகவும் உடல்நலம் பாதிக்கப்பட்டு சோர்வடையச் செய்யும்.")
 
-            st.subheader("📄 Download Live AQI Report")
+            st.subheader("📄 Download Live AQI Report / பதிவிறக்கி AQI படிவம்")
             pdf = FPDF()
             pdf.add_page()
             pdf.set_font("Arial", size=12)
