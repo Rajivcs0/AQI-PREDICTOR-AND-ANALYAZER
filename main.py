@@ -157,17 +157,17 @@ if st.session_state.logged_in:
 
         st.subheader("📣 Air Quality Notification")
         if predicted_aqi <= 50:
-            st.success("✅ Good – No worries.")
+            st.success("✅ Good – No worries.  / நல்ல காற்று மற்றும் மாசற்ற சூழல் உள்ளது.")
         elif predicted_aqi <= 100:
-            st.info("😷 Satisfactory – Minor pollution, use mask if needed.")
+            st.info("😷 Satisfactory – Minor pollution, use mask if needed. / ஏற்றுக்கொள்ளக் கூடிய சுற்றுச்சூழல்.")
         elif predicted_aqi <= 200:
-            st.warning("⚠️ Moderate – Harmful for sensitive groups.")
+            st.warning("⚠️ Moderate – Harmful for sensitive groups./ சற்று அளவான சுற்றுச்சூழல் அமைப்பு - உடல்நலம் கெடுவதற்கு வாய்ப்புள்ளது.")
         elif predicted_aqi <= 300:
-            st.error("❌ Poor – Harmful for sensitive and elderly.")
+            st.error("❌ Poor – Harmful for sensitive and elderly./ சற்று மோசமான சுற்றுச்சூழல் - உடல்நலம் கெடுவதற்கு வாய்ப்புள்ளது.")
         elif predicted_aqi <= 400:
-            st.error("🚨 Very Poor – Dangerous for health.")
+            st.error("🚨 Very Poor – Dangerous for health./ மோசமான சுற்றுச்சூழல் - வெளியில் செல்வதைத் தவிர்க்கவும்.")
         else:
-            st.error("🛑 Severe – Seek medical help.")
+            st.error("🛑 Severe – Seek medical help. / மிகவும் மோசமான சுற்றுச்சூழல் - மிகவும் உடல்நலம் பாதிக்கப்பட்டு சோர்வடையச் செய்யும்.")
     else:
         st.warning("⚠️ No data found for selected input.")
 
@@ -192,7 +192,7 @@ if st.session_state.logged_in:
 
     # --------------- LIVE AQI SECTION ----------------
     st.markdown("---")
-    st.subheader("🌐 Real-Time AQI Data via AQICN")
+    st.subheader("🌐 Real-Time AQI Data via AQICN / AQICN வழியாக நிகழ்நேர AQI தரவு")
     live_city = st.selectbox("Select a city", ["chennai", "mumbai", "delhi", "kolkata", "ahmedabad", "hyderabad", "jaipur", "bangalore"])
 
     def fetch_live_aqi(city):
