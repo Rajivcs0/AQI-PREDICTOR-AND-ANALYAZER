@@ -91,14 +91,14 @@ choice = st.sidebar.selectbox("Choose Action", menu)
 
 if not st.session_state.logged_in:
     if choice == "Signup":
-        st.subheader("🔐 Create New Account")
+        st.subheader("🔐 Create New Account / புதிதாக கணக்கு துவங்க")
         new_user = st.text_input("Username")
         new_pass = st.text_input("Password", type="password")
         if st.button("Signup"):
             add_user(new_user, hash_password(new_pass))
             st.success("✅ Account created successfully. You can now log in.")
     else:
-        st.subheader("🔑 Login to Your Account")
+        st.subheader("🔑 Login to Your Account / கணக்கினை திறக்க")
         username = st.text_input("Username")
         password = st.text_input("Password", type="password")
         if st.button("Login"):
